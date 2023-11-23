@@ -1,0 +1,68 @@
+@keyframes relleno{
+    0% {stroke: black; left: 0px; top: 0px;}
+    25% {stroke: rgb(26, 255, 0); left: 50px; top: -50px}
+    50% {stroke: rgb(105, 253, 255); left: 100px; top: 0px;}
+    80% {stroke: rgb(0, 0, 225); left: 150px; top: -50px;}
+    100% {stroke: rgb(195, 0, 255); left: 200px; top: 0px}
+}
+
+@keyframes rotacion{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes relleno-camera{
+    0% {fill: rgb(0, 191, 255); stroke: blue; left: 0px; top: 0px;}
+    50% {fill: rgb(0, 255, 0); stroke: green; left: 0px; top: 150px;}
+    100% {fill: rgb(255, 0, 76); stroke: blue; left: 0px; top: 0px;}
+}
+
+body{
+    text-align: center;
+    margin-top: 0px;
+    background-color: #bac1cb
+}
+
+.container{
+    height: 100vh;
+    display: flex;;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator{
+    width: 205px;
+    stroke:black;
+    stroke-width: 1px;
+    position: relative;
+    animation-name: relleno;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#camera{
+    width: 150px;
+    fill: rgb(159, 162, 220);
+    stroke: rgb(99, 144, 255);
+    stroke-width: 1px;
+    position: relative;
+    animation: relleno-camera 3s linear .5s infinite forwards;
+    
+}
+
+#cloud{
+    width: 150px;
+    fill: cornflowerblue;
+    stroke: rgb(99, 144, 255);
+    stroke-width: 1px;
+    position: relative;
+    animation: rotacion 3s linear .3s infinite forwards;
+}
+
+.titulo{
+    font-size: 40px;
+    color: white;
+}
